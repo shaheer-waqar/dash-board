@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import AdvertiseSlice from "./slices/AdvertiseSlice";
 import EXchangeRuleSclice from "./slices/EXchangeRuleSclice";
 import purchaseRuleSclice from "./slices/purchaseRuleSclice";
+import AdvertiseSlice from "./slices/AdvertiseSlice";
 
 export const store = configureStore({
     reducer :{
