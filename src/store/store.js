@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import EXchangeRuleSclice from "./slices/EXchangeRuleSclice";
 import purchaseRuleSclice from "./slices/purchaseRuleSclice";
 import AdvertiseSlice from "./slices/AdvertiseSlice";
+import exchangeRule from "./slices/exchangeRule";
 
 export const store = configureStore({
     reducer :{
-        exchangeRule:EXchangeRuleSclice,
+        exchangeRule:exchangeRule,
         adverTise:AdvertiseSlice,
         purchaseRule:purchaseRuleSclice,
     }

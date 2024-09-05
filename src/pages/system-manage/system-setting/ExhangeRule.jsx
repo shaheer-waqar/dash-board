@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CustomTable from "../../../component/CustomTable";
 import { useDispatch, useSelector } from "react-redux";
 import DynamicForm from "../../../component/form-component/DynamicForm";
-import { addExchange, deleteExchange, editExchange } from "../../../store/slices/EXchangeRuleSclice";
+import { addExchange, deleteExchange, editExchange } from "../../../store/slices/exchangeRule";
 
 function ExhangeRule() {
   const columns = [
