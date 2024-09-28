@@ -23,7 +23,7 @@ function PurchaseRule() {
     {
       field: "diamonds",
       headerName: "Number of Diamonds",
-      width: 150,
+      width: 120,
       headerAlign: "center",
       align: "center",
     },
@@ -70,14 +70,13 @@ function PurchaseRule() {
     {
       field: "status",
       headerName: "Status",
-      width: 290,
+      width: 250,
       headerAlign: "center",
       align: "center",
       renderCell: (params) => (
         <span
           style={{
             color: "blue",
-            fontWeight: "bold",
             textAlign: "center",
             width: "100%",
           }}
@@ -104,7 +103,7 @@ function PurchaseRule() {
       filterable: false,
       hidetable:false,
       renderCell: (params) => (
-        <div className="w-full"onClick={(e)=>e.stopPropagation()}>
+        <div className="w-full flex justify-center "onClick={(e)=>e.stopPropagation()}>
           <span 
           onClick={()=>handleEdit(params.row)}
           className="mr-1 bg-blue-100 border-blue-300 border-2 rounded-[3px]  px-4 py-1 cursor-pointer ">

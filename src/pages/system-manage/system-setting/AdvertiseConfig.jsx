@@ -23,7 +23,6 @@ function AdvertiseConfig() {
         <span
           style={{
             color: "blue",
-            fontWeight: "bold",
             textAlign: "center",
             width: "100%",
           }}
@@ -64,7 +63,7 @@ function AdvertiseConfig() {
       filterable: false,
       hidetable:false,
       renderCell: (params) => (
-        <div className="w-full"onClick={(e)=>e.stopPropagation()}>
+        <div className="w-full flex justify-center "onClick={(e)=>e.stopPropagation()}>
           <span 
           onClick={()=>handleEdit(params.row)}
           className="mr-1 bg-blue-100 border-blue-300 border-2 rounded-[3px]  px-4 py-1 cursor-pointer ">

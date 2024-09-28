@@ -10,7 +10,8 @@
 
 .scrollbar-thin {
   scrollbar-width: thin;
-  scrollbar-color: #3b3b3bbe #4b5972; /* Thumb and track color for Firefox */
+  scrollbar-color: #3b3b3bbe #4b5972; 
+  /* Thumb and track color for Firefox */
 }
 
 

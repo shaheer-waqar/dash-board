@@ -2,14 +2,14 @@ import * as React from 'react';
 import { DataGrid,  } from '@mui/x-data-grid';
 import Paper from '@mui/material/Paper';
 
-export default function CustomTable({rows,columns}) {
+export default function CustomTable({rows,columns,height=600}) {
 
 
 const paginationModel = { page: 0, pageSize: 10 };
 
 return (
   <>
-  <Paper sx={{ height: 600, width: '100%' }}>
+  <Paper sx={{ height: height, width: '100%' }}>
     <DataGrid
       rows={rows}
       columns={columns}
@@ -19,12 +19,17 @@ return (
       sx={{
         border: 0,
         '& .MuiDataGrid-cell': {
-          borderRight: '1px solid rgba(224, 224, 224, 1)', // Adds border between columns
-          textAlign: 'center', // Ensures all text is centered
+          borderRight: '1px solid rgba(224, 224, 224, 1)',
+          whiteSpace: 'normal',
+          wordWrap: 'break-word',
+          lineHeight: 'normal',
+          py:1,
         },
         '& .MuiDataGrid-columnHeaders': {
-          borderRight: '2px solid rgba(224, 224, 224, 1)', // Adds border under header
+          borderRight: '2px solid rgba(224, 224, 224, 1)',
         },
+
+
       }}
     />
   </Paper>

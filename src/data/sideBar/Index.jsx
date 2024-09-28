@@ -98,7 +98,7 @@ export const sideBarData = [
       },
       {
         label: "system Message Management",
-        path: "/systemMessageManagement",
+        path: "/systemUser/systemMessageManagement",
         icons:<RiMessage2Fill/>,
 
       },
@@ -106,8 +106,8 @@ export const sideBarData = [
         label: "Crtification Management",
         icons:<FaUsersLine/>,
         subItems: [
-          { label: "Anchor certification list", path: "/anchortCertificationList" },
-          { label: "Vertical Name List", path: "/verticalNameList" },
+          { label: "Anchor certification list", path: "/systemUser/systemAuth/anchortCertificationList" },
+          { label: "Vertical Name List", path: "/systemUser/systemAuth/verticalNameList" },
         ],
       },
       {

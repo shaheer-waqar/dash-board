@@ -3,7 +3,7 @@ import './App.css'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import Layout from './component/layout-view/Layout';
 import Home from './pages/home-page/Home';
-import { AdminManage, AdvertiseConfig, AnchorTag, EncryptionConfig, ExhangeRule, IncomeRecord, MobileConfig, NickNameConfig, OperationLog, PrivateMessageGift, PurchaseRule, RevenueRecord, RobotAvatar, RoleManege, UserManagement } from './AllPages';
+import { AdminManage, AdvertiseConfig, AnchorCertificateList, AnchorTag, EncryptionConfig, ExhangeRule, IncomeRecord, MobileConfig, NickNameConfig, OperationLog, PrivateMessageGift, PurchaseRule, RevenueRecord, RobotAvatar, RoleManege, SystemManageMessage, UserManagement, VerifiedNameList } from './AllPages';
 // import ResizableTable from './ResizalbeTabble';
 
 function App() {
@@ -40,6 +40,10 @@ function App() {
        <Route path='/systemUser/systemUserGeneral/expendituresRecord' element={<IncomeRecord/>}/>
        <Route path='/systemUser/systemUserGeneral/revenueRecord' element={<RevenueRecord/>}/>
 
+       <Route path='/systemUser/systemAuth/anchortCertificationList' element={<AnchorCertificateList/>}/>
+
+       <Route path='/systemUser/systemMessageManagement' element={<SystemManageMessage/>}/>
+       <Route path='/systemUser/systemAuth/verticalNameList' element={<VerifiedNameList/>}/>
 
       </Route>
     </Routes> 

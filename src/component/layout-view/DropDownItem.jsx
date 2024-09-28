@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Form, NavLink } from "react-router-dom";
+import { addPage } from "../../store/slices/receenPage";
 
 function DropDownItem({ items, level = 1,setMenuOpen }) {
   const [isOpen, setIsOpen] = useState(false);
+  const data = useSelector(state => state.recenPage.recenPage)
+  const dispatch = useDispatch();
 
   const toggleHandler = () => {
     setIsOpen((prev) => !prev);
@@ -17,6 +21,15 @@ function DropDownItem({ items, level = 1,setMenuOpen }) {
 
   const paddingLeft = `${level * 15}px`; 
 
+  const [recentpage,setRecentPage] = useState([]);
+
+  const recentPageHandler = (link,path)=>{
+    const obj ={link,path}
+    
+
+    dispatch(addPage(obj));
+    // console.log(data)
+  }
   return (
     <>
       {items.subItems ? (
@@ -60,6 +73,7 @@ function DropDownItem({ items, level = 1,setMenuOpen }) {
           ${isActive  &&"text-blue-600"}
           `}
           style={{ paddingLeft }}
+          onClick={()=>recentPageHandler(items.label,items.path)}
         >
           {items.icons && <span className="text-xl">{items.icons}</span>}
           {items.label}
